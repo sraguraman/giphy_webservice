@@ -10,7 +10,7 @@ def query_giphy(search_term):
     url = 'http://api.giphy.com/v1/gifs/search'
     key = 'vIa6iVvRwwONNxkoXfSvGnyKuGvDgg3d'
     num_requests_allowed = 5
-    payload = {'q':search_term, 'api_key': key, 'limit': num_requests_allowed}
+    payload = {'q': search_term, 'api_key': key, 'limit': num_requests_allowed}
     final_response = parse_json_response(requests.get(url, params=payload))
     return json.dumps({'data': final_response})
 
